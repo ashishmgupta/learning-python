@@ -1,5 +1,10 @@
 import pandas as pd
 
+# Reading from CSV
+df = pd.read_csv(file_path)
+print(df)
+print(df["day"])
+
 # Creating a dataframe
 # A dataframe is a collection of serieses.
 # In the below example, c1 and c2 are serieses with values 1,2,3 and 4,5,6 in them respectively
