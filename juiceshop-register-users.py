@@ -2,7 +2,10 @@
 # Registers specificed number of users in the JuiceShop application
 # This can be used as baseline for how users get created in the JuiceShop application.
 # Ideally this pattern should be learnt by a WAF product. So if there is an anomaly in the request, WAF can recognize and alert.
-
+# 
+# TODO : 
+#   a) Renerate the prefix of the email address instead of asking the user.
+#   b) Remove hardcoding of values in the request payload.
 import requests
 import json
 
@@ -13,7 +16,7 @@ headers = {
 }
 user_prefix = ""
 
-# TODO : Renerate the prefix of the email address instead of asking the user
+
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
