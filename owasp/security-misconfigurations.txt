@@ -1,0 +1,3 @@
+# Disable verbose errors. Log everything and show a generic page to the user.
+# Remove server information from resonse headers
+

@@ -1,0 +1,14 @@
+XML can reference external files (entities )
+
+<?xml version="1.0"?>
+<!DOCTYPE foo[<!ENTITY xxe SYSTEM "file:///c:/windows/win.ini">]>
+<body>Meeting &xxe;</body>
+
+xxe points to c:/windows/win.ini
+xxe is reffered in the body of teh xml
+If the xml is interpreted as is, It will also print the contents of win.ini
+
+
+# Defense 
+#  Dont use XML if possible
+#  Make sure teh website runs with account with limited permissions

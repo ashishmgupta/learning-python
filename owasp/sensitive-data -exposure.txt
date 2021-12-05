@@ -1,0 +1,4 @@
+#Sensitive data in hidden fields
+#Sensitive data in part of JSON response which is not shown in the UI
+#Unencrypted data in the database
+# No HTTPS for web portals using sensitive and plain text data

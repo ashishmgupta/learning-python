@@ -1,0 +1,8 @@
+# Access can be seen as two types
+    # Horizontal Access
+        # Users with same permission level can not access each others data ("Same permission level" - thats why "horizontal")
+    # Vertical Access
+        # Users with different permission level can not perform actions they are not authorized to.
+        # Think in terms of Subject, Object and Action
+        # Subject (who is attempting to access e.g. user) - Object (What is being accessed e.g. File) - Action (What is action e.g. Delete)
+        # Role-based Access Control (RBAC) is a nice way to implement Vertical access
