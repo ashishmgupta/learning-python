@@ -1,0 +1,22 @@
+Defenses :
+    Output Encoding
+        Markup will be encoded.
+        e.g. <script src="evilwebsite.com/eval.js"/>
+        will be rendered as below
+        &lt;script src=&quot;evilwebsite.com/eval.js&quot;/&gt;
+
+        use a library in the method to do output encoding.
+    
+    
+    Input validation
+
+    Content Security Policy
+        Specifies the location where the scripts (or css, images etc) can be loaded from the page
+        Can be sent as response header
+        Can also be specified in the meta tag in the HTML
+
+        e.g. Consider the below header
+        Content-Security-Policy: script=src 'self' 'unsafe-inline'
+        'script-src' means Its about loading of scripts
+        'self' means load the scripts, images, css from the same domain. 
+        'unsafe-inline' means page can have inline javascript
