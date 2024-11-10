@@ -31,3 +31,27 @@ print(type(result))
 # Iterating through the rows of a dataframe
 for i, row in df.iterrows():
     print(str(row["c1"]) + "--" + str(row["c2"]))
+
+
+# url.csv
+#id,api_url
+#1,https://checkip.amazonaws.com
+#2,https://checkip.amazonaws.com
+#3,https://checkip.amazonaws.com
+#4,https://checkip.amazonaws.com
+
+# Add a column in the abobe file with status code of the response on call of each API in each row
+import requests
+import pandas as pd
+def getStatusForUrl(url):
+    resp = requests.get(url)
+    return resp.status_code
+
+
+df_api = pd.read_csv("url.csv")
+df_api["status"] = [getStatusForUrl(x) for x in df_api["api_url"]]
+#id,api_url,status
+#1,https://checkip.amazonaws.com,200
+#2,https://checkip.amazonaws.com,200
+#3,https://checkip.amazonaws.com,200
+#4,https://checkip.amazonaws.com,200
