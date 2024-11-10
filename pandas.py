@@ -50,6 +50,7 @@ def getStatusForUrl(url):
 
 df_api = pd.read_csv("url.csv")
 df_api["status"] = [getStatusForUrl(x) for x in df_api["api_url"]]
+df_api.to_csv("api_call_with_status.csv")
 #id,api_url,status
 #1,https://checkip.amazonaws.com,200
 #2,https://checkip.amazonaws.com,200
